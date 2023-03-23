@@ -1,4 +1,5 @@
 using Jogo_da_velha.Logica_jogo.Entidades.Pecas;
+using Jogo_da_velha.Logica_jogo.Exceptions;
 
 namespace Jogo_da_velha.Logica_jogo;
 
@@ -20,13 +21,14 @@ public class Tabuleiro
         }
     }
 
-    public void MoverPeca(Posicao origem, Posicao destino)
+    public void ColocarPeca(Posicao destino, Peca peca)
     {
-        Casa casaOrigem = Casas.ObterCasa(origem);
         Casa casaDestino = Casas.ObterCasa(destino);
 
-        casaDestino.ColocarPeca(casaOrigem.Peca);
-        casaOrigem.RemoverPeca(); 
+        if(!casaDestino.EstaVazia())
+            throw new CasaOcupadaException();
+            
+        casaDestino.ColocarPeca(peca);
     }
 
     public bool CasaEstaVazia(Posicao posicao) => Casas.ObterCasa(posicao).EstaVazia();
@@ -74,6 +76,19 @@ public class Tabuleiro
         }
 
         return (pecasIguaisNaDiagonalPrincipal, pecasIguaisNaDiagonalSecundaria) == (TAM_TABULEIRO, TAM_TABULEIRO);
+    }
+
+    public Casa[,] ObterCasas()
+    {
+        return Casas.Clone() as Casa[,];
+    }
+
+    internal List<Posicao> ObterPosicoesVazias()
+    {
+        return Casas.Cast<Casa>()
+                    .Where(casa => casa.EstaVazia())
+                    .Select(casa => casa.Posicao)
+                    .ToList();
     }
 }
 

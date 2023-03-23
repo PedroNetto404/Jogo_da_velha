@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Jogo_da_velha.Logica_jogo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Jogo_da_velha.Logica_jogo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Jogo_da_velha.Logica_jogo.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Jogo_da_velha.Logica_jogo/1.0.0": {
+      "type": "project",
+      "path": "../Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj",
+      "msbuildProject": "../Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Jogo_da_velha.Logica_jogo >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/pedronetto/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj": {
+              "projectPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj": {}
+    "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj": {}
   },
   "projects": {
-    "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj": {
+    "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj",
+        "projectUniqueName": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj",
         "projectName": "Jogo_da_velha.Logica_jogo",
-        "projectPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj",
+        "projectPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/Jogo_da_velha.Logica_jogo.csproj",
         "packagesPath": "/home/pedronetto/.nuget/packages/",
-        "outputPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/Jogo_da_velha.Logica_jogo/obj/",
+        "outputPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pedronetto/.nuget/NuGet/NuGet.Config"

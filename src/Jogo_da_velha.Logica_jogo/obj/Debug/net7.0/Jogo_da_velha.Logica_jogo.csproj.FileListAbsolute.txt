@@ -1,0 +1,5 @@
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.csproj.AssemblyReference.cache
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.GeneratedMSBuildEditorConfig.editorconfig
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.AssemblyInfoInputs.cache
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.AssemblyInfo.cs
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.csproj.CoreCompileInputs.cache
