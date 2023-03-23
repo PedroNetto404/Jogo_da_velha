@@ -6,7 +6,7 @@ public class Jogo
 {
     public bool EmExecucao { get; private set; }
     public Jogador JogadorAtual { get; private set; }
-    private Tabuleiro _tabuleiro;
+    public Tabuleiro Tabuleiro {get; private set;}
     private Jogador _jogador;
     private Jogador _adversario;
 
@@ -14,30 +14,34 @@ public class Jogo
     {
         _jogador = jogador;
         _adversario = adversario;
-        _tabuleiro = new();
+        Tabuleiro = new();
+        JogadorAtual = _jogador;
     }
 
-    private void Iniciar() => EmExecucao = true;
-    private void Encerrar() => EmExecucao = false;
+    public void Iniciar() => EmExecucao = true;
+    public void Encerrar() => EmExecucao = false;
 
-    public void RealizarJogada(Jogada jogada)
+    public void RealizarJogada(Posicao jogada)
     {
         if(!EmExecucao) return;
 
-        jogada.Validar(_tabuleiro);
-
-        _tabuleiro.MoverPeca(jogada.Origem, jogada.Destino);
+        Tabuleiro.ColocarPeca(jogada, JogadorAtual.Peca);
 
         AlterarTurno();
 
         if(VerificarTermino()) Encerrar();
     }
+    public List<Posicao> ObterJogadasDisponiveis() =>
+        Tabuleiro.ObterPosicoesVazias();
+    public bool JogadaValida(Posicao posicao) =>
+        Tabuleiro.CasaEstaVazia(posicao);
 
     private void AlterarTurno() =>
         JogadorAtual = JogadorAtual == _jogador ? _adversario : _jogador;
 
     private bool VerificarTermino() => 
-        _tabuleiro.VerificarVitoria(JogadorAtual.Peca) || _tabuleiro.VerificarEmpate()
+        Tabuleiro.VerificarVitoria(JogadorAtual.Peca) || Tabuleiro.VerificarEmpate();
+public bool OcorreuVitoria() => Tabuleiro.VerificarVitoria(JogadorAtual.Peca);
 
-
+    public bool OcorreuEmpate() => Tabuleiro.VerificarEmpate();
 }
