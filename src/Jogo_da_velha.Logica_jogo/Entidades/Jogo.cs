@@ -1,47 +1,56 @@
 using Jogo_da_velha.Logica_jogo.Entidades;
+using Jogo_da_velha.Logica_jogo.Entidades.Pecas;
+using Jogo_da_velha.Logica_jogo.Exceptions;
+using Jogo_da_velha.Logica_jogo.ObjetosDeValor;
 
 namespace Jogo_da_velha.Logica_jogo;
 
 public class Jogo
 {
-    public bool EmExecucao { get; private set; }
+    public bool Rodando { get; private set; }
     public Jogador JogadorAtual { get; private set; }
-    public Tabuleiro Tabuleiro {get; private set;}
-    private Jogador _jogador;
-    private Jogador _adversario;
+    public Tabuleiro Tabuleiro {get; private set;} = new();
+    public Jogador Jogador { get; private set; } = new(new Cruzado());
+    public Jogador Adversario { get; private set; } = new(new Bolinha());
 
-    public Jogo(Jogador jogador, Jogador adversario)
-    {
-        _jogador = jogador;
-        _adversario = adversario;
-        Tabuleiro = new();
-        JogadorAtual = _jogador;
-    }
+    public Jogo() => JogadorAtual = Jogador;
 
-    public void Iniciar() => EmExecucao = true;
-    public void Encerrar() => EmExecucao = false;
+    public void Iniciar() => Rodando = true;
+    public void Encerrar() => Rodando = false;
 
     public void RealizarJogada(Posicao jogada)
     {
-        if(!EmExecucao) return;
+        if(!Rodando)     
+            throw new JogoNaoIniciadoException();
+
+        if(!PossicaoDisponivel(jogada)) 
+            throw new PosicaoIndisponivelException();
 
         Tabuleiro.ColocarPeca(jogada, JogadorAtual.Peca);
+        JogadorAtual.AdicionarJogada(jogada);
 
-        AlterarTurno();
-
-        if(VerificarTermino()) Encerrar();
+        if (FimDeJogo()) Encerrar();
     }
     public List<Posicao> ObterJogadasDisponiveis() =>
         Tabuleiro.ObterPosicoesVazias();
-    public bool JogadaValida(Posicao posicao) =>
-        Tabuleiro.CasaEstaVazia(posicao);
 
-    private void AlterarTurno() =>
-        JogadorAtual = JogadorAtual == _jogador ? _adversario : _jogador;
 
-    private bool VerificarTermino() => 
-        Tabuleiro.VerificarVitoria(JogadorAtual.Peca) || Tabuleiro.VerificarEmpate();
-public bool OcorreuVitoria() => Tabuleiro.VerificarVitoria(JogadorAtual.Peca);
+    private bool FimDeJogo() => Tabuleiro.VerificarVitoria(JogadorAtual.Peca) || Tabuleiro.VerificarEmpate();
+    public bool OcorreuVitoria() => Tabuleiro.VerificarVitoria(JogadorAtual.Peca);
 
     public bool OcorreuEmpate() => Tabuleiro.VerificarEmpate();
+
+    public bool PossicaoDisponivel(Posicao posicao) =>
+        ObterJogadasDisponiveis().Exists(p => p == posicao);
+
+    public void ConfigurarJogadores(string jogador, string adversario)
+    {
+        Jogador.Nome = jogador;
+        Adversario.Nome = adversario;
+    }
+
+    public void TrocarTurno()
+    {
+        JogadorAtual = JogadorAtual == Jogador ? Adversario : Jogador;
+    }
 }

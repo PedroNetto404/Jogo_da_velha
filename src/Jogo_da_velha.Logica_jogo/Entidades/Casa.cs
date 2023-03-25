@@ -1,5 +1,6 @@
 using Jogo_da_velha.Logica_jogo.Entidades.Pecas;
 using Jogo_da_velha.Logica_jogo.Exceptions;
+using Jogo_da_velha.Logica_jogo.ObjetosDeValor;
 
 namespace Jogo_da_velha.Logica_jogo;
 public class Casa
@@ -19,4 +20,6 @@ public class Casa
     }
 
     public bool EstaVazia() => Peca is null;
+
+    public bool TemPecaIgualA(Peca peca) => !EstaVazia() && Peca == peca;
 }

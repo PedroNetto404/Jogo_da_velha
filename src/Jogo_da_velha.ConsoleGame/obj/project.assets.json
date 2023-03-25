@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.UI/Jogo_da_velha.UI.csproj",
-      "projectName": "Jogo_da_velha.UI",
-      "projectPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.UI/Jogo_da_velha.UI.csproj",
+      "projectUniqueName": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.ConsoleGame/Jogo_da_velha.ConsoleGame.csproj",
+      "projectName": "Jogo_da_velha.ConsoleGame",
+      "projectPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.ConsoleGame/Jogo_da_velha.ConsoleGame.csproj",
       "packagesPath": "/home/pedronetto/.nuget/packages/",
-      "outputPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.UI/obj/",
+      "outputPath": "/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.ConsoleGame/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/pedronetto/.nuget/NuGet/NuGet.Config"

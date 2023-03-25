@@ -4,4 +4,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Entidades\Position.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Interfaces\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Interfaces\**" />
+  </ItemGroup>
 </Project>

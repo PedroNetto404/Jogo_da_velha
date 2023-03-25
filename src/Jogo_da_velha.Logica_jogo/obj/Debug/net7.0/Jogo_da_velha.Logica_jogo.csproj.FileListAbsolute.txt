@@ -3,3 +3,10 @@
 /home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.AssemblyInfoInputs.cache
 /home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.AssemblyInfo.cs
 /home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.csproj.CoreCompileInputs.cache
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/bin/Debug/net7.0/Jogo_da_velha.Logica_jogo.deps.json
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/bin/Debug/net7.0/Jogo_da_velha.Logica_jogo.dll
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/bin/Debug/net7.0/Jogo_da_velha.Logica_jogo.pdb
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.dll
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/refint/Jogo_da_velha.Logica_jogo.dll
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/Jogo_da_velha.Logica_jogo.pdb
+/home/pedronetto/OneDrive/Estudo/Projetos/Jogo_da_velha/src/Jogo_da_velha.Logica_jogo/obj/Debug/net7.0/ref/Jogo_da_velha.Logica_jogo.dll

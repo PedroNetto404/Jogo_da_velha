@@ -2,10 +2,20 @@
   <ItemGroup>
     <ProjectReference Include="..\Jogo_da_velha.Logica_jogo\Jogo_da_velha.Logica_jogo.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Utils\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Utils\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Utils\**" />
+  </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>Jogo_da_velha.UI</RootNamespace>
   </PropertyGroup>
 </Project>

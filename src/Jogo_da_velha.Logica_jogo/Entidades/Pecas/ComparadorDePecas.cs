@@ -11,6 +11,6 @@ public class ComparadorDePecas : IEqualityComparer<Peca>
     }
     public int GetHashCode(Peca obj)
     {
-        throw new NotImplementedException();
+        return obj.ToString().GetHashCode();
     }
 }

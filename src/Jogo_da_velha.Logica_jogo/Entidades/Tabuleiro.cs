@@ -1,5 +1,6 @@
 using Jogo_da_velha.Logica_jogo.Entidades.Pecas;
 using Jogo_da_velha.Logica_jogo.Exceptions;
+using Jogo_da_velha.Logica_jogo.ObjetosDeValor;
 
 namespace Jogo_da_velha.Logica_jogo;
 
@@ -49,19 +50,23 @@ public class Tabuleiro
 
     private bool VerificarVitoriaHorizontalEVertical(Peca peca)
     {
-        int pecasIguaisNaHorizontal = 0; 
-        int pecasIguauisNaVertical = 0;
+        (int pecasIguaisNaHorizontal,int pecasIguauisNaVertical)  = (0,0);
+
 
         for (int i = 0; i < TAM_TABULEIRO; i++)
         {
             for (int j = 0; j < TAM_TABULEIRO; j++)
             {
-                if(Casas[i,j].Equals(peca)) pecasIguaisNaHorizontal++;
-                if(Casas[j,i].Equals(peca)) pecasIguauisNaVertical++;
+                pecasIguaisNaHorizontal += Casas[i, j].TemPecaIgualA(peca) ? 1 : 0;
+                pecasIguauisNaVertical += Casas[j, i].TemPecaIgualA(peca) ? 1 : 0;
             }
+
+            if (pecasIguaisNaHorizontal == TAM_TABULEIRO || pecasIguauisNaVertical == TAM_TABULEIRO) return true;
+            
+            (pecasIguaisNaHorizontal, pecasIguauisNaVertical)  = (0,0);
         }
 
-        return (pecasIguaisNaHorizontal, pecasIguauisNaVertical) == (TAM_TABULEIRO, TAM_TABULEIRO);
+        return false;
     }
 
     private bool VerificarVitoriaDiagonais(Peca peca)
@@ -71,11 +76,11 @@ public class Tabuleiro
 
         for (int i = 0; i < TAM_TABULEIRO; i++)
         {
-            if(Casas[i,i].Equals(peca)) pecasIguaisNaDiagonalPrincipal++;
-            if(Casas[i,TAM_TABULEIRO - i - 1].Equals(peca)) pecasIguaisNaDiagonalSecundaria++;
+            if(Casas[i,i].TemPecaIgualA(peca)) pecasIguaisNaDiagonalPrincipal++;
+            if(Casas[i,TAM_TABULEIRO - i - 1].TemPecaIgualA(peca)) pecasIguaisNaDiagonalSecundaria++;
         }
 
-        return (pecasIguaisNaDiagonalPrincipal, pecasIguaisNaDiagonalSecundaria) == (TAM_TABULEIRO, TAM_TABULEIRO);
+        return pecasIguaisNaDiagonalPrincipal == TAM_TABULEIRO || pecasIguaisNaDiagonalSecundaria == TAM_TABULEIRO;
     }
 
     public Casa[,] ObterCasas()
